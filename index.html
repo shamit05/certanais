@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certanaIS - FormFlow | Healthcare & Insurance Documentation Bridge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        main {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px;
+            margin: 20px auto;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pitch-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .card-subtitle {
+            font-size: 1.1em;
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .card-description {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .features {
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 40px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+
+        .feature-content h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-content p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            main {
+                padding: 30px 20px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.8em;
+            }
+
+            .pitch-cards {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">certanaIS</div>
+            <div class="tagline">Powered by FormFlow</div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <h1>Streamlining Disability Claims Processing</h1>
+                <p>A HIPAA compliant web-based platform that eliminates friction in disability claims between claimants, physicians, and insurers.</p>
+            </section>
+
+            <div class="pitch-cards">
+                <div class="card">
+                    <div class="card-title">🌉</div>
+                    <div class="card-subtitle">The Broken Bridge</div>
+                    <div class="card-description">
+                        FormFlow fixes the broken bridge between healthcare providers and insurance companies that rely on their medical documentation to adjudicate disability income claims.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">🔗</div>
+                    <div class="card-subtitle">The Fourth Node</div>
+                    <div class="card-description">
+                        FormFlow is a HIPAA compliant web-based platform that serves as a fourth "node" between claimants, physicians, and insurers to eliminate the friction in disability claims.
+                    </div>
+                </div>
+            </div>
+
+            <section class="features">
+                <h2>Why certanaIS?</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-content">
+                            <h3>HIPAA Compliant</h3>
+                            <p>Fully compliant with healthcare privacy regulations to protect sensitive medical information.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-content">
+                            <h3>Streamlined Process</h3>
+                            <p>Eliminate friction and delays in the disability claims documentation workflow.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌐</div>
+                        <div class="feature-content">
+                            <h3>Web-Based Platform</h3>
+                            <p>Access from anywhere with our secure, cloud-based solution.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤝</div>
+                        <div class="feature-content">
+                            <h3>Connected Ecosystem</h3>
+                            <p>Seamlessly connects claimants, physicians, and insurance providers.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 certanaIS. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
