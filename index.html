@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #0f0f0f;
-            background: #000;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             min-height: 100vh;
         }
 
@@ -25,196 +25,240 @@
         }
 
         header {
-            background: #000;
+            background: white;
             padding: 30px 40px;
-            border-bottom: 3px solid #00ff41;
+            box-shadow: 0 4px 20px rgba(100, 181, 246, 0.15);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-radius: 0 0 30px 30px;
         }
 
         .company-name {
-            font-family: 'Courier New', Courier, monospace;
             font-size: 2em;
-            font-weight: 900;
-            color: #00ff41;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+            font-weight: 700;
+            color: #1976d2;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pixel-icon {
+            font-size: 1.2em;
+            display: inline-block;
         }
 
         main {
-            background: #0a0a0a;
-            min-height: calc(100vh - 200px);
+            padding: 40px 20px;
         }
 
         .hero-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            padding: 80px 60px;
+            gap: 40px;
+            padding: 60px 40px;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .hero-left h1 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 4em;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 30px;
-            line-height: 1.2;
-            text-shadow: 0 0 20px #00ff41;
+        .hero-left {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
         }
 
         .hero-left .subtitle {
-            font-size: 1.3em;
-            color: #00ff41;
-            font-weight: 700;
+            font-size: 1.2em;
+            color: #64b5f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-left h1 {
+            font-size: 3em;
+            font-weight: 800;
+            color: #1976d2;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .pixel-art {
+            font-size: 2em;
+            margin: 20px 0;
+            text-align: center;
         }
 
         .hero-right {
-            background: #111;
-            padding: 40px;
-            border: 2px solid #00ff41;
-            border-radius: 0;
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
+            border: 3px solid #e3f2fd;
         }
 
         .hero-right h2 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.8em;
-            color: #00ff41;
+            font-size: 2em;
+            color: #1976d2;
             margin-bottom: 20px;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .hero-right p {
             font-size: 1.1em;
-            color: #e0e0e0;
+            color: #546e7a;
             line-height: 1.8;
         }
 
+        .decorative-pixels {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+        }
+
         .contact-section {
-            background: #000;
-            padding: 100px 60px;
-            border-top: 3px solid #00ff41;
+            background: white;
+            padding: 80px 60px;
+            margin: 40px 40px 0 40px;
+            border-radius: 50px;
             text-align: center;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
         }
 
         .contact-section h2 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 5em;
-            font-weight: 900;
-            color: #00ff41;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            text-shadow: 0 0 30px #00ff41, 0 0 60px #00ff41;
+            font-size: 4em;
+            font-weight: 800;
+            color: #1976d2;
+            margin-bottom: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .contact-email {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 2.5em;
-            font-weight: 700;
-            color: #fff;
-            margin-top: 30px;
-            letter-spacing: 2px;
+            font-size: 2em;
+            font-weight: 600;
+            color: #64b5f6;
+            margin-top: 20px;
         }
 
         .contact-email a {
-            color: #00ff41;
+            color: #1976d2;
             text-decoration: none;
-            border-bottom: 3px solid #00ff41;
+            padding: 15px 40px;
+            background: #e3f2fd;
+            border-radius: 50px;
+            display: inline-block;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(100, 181, 246, 0.2);
         }
 
         .contact-email a:hover {
-            text-shadow: 0 0 20px #00ff41;
-            border-bottom: 3px solid #fff;
+            background: #bbdefb;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 181, 246, 0.3);
         }
 
         footer {
-            background: #000;
+            background: white;
             text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #00ff41;
+            padding: 30px 20px;
+            margin: 40px 40px 0 40px;
+            border-radius: 30px 30px 0 0;
+            box-shadow: 0 -4px 20px rgba(100, 181, 246, 0.15);
         }
 
         footer p {
-            font-family: 'Courier New', Courier, monospace;
-            color: #888;
-            font-size: 0.9em;
-            letter-spacing: 1px;
+            color: #90a4ae;
+            font-size: 0.95em;
         }
 
         @media (max-width: 968px) {
             .hero-section {
                 grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 60px 30px;
+                gap: 30px;
+                padding: 40px 20px;
+            }
+
+            .hero-left, .hero-right {
+                padding: 35px;
             }
 
             .hero-left h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
 
             .contact-section h2 {
-                font-size: 3em;
+                font-size: 2.5em;
             }
 
             .contact-email {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
 
             .company-name {
-                font-size: 1.3em;
+                font-size: 1.5em;
             }
         }
 
         @media (max-width: 600px) {
             header {
                 padding: 20px;
+                border-radius: 0 0 20px 20px;
             }
 
             .company-name {
-                font-size: 1em;
-                letter-spacing: 1px;
+                font-size: 1.2em;
+            }
+
+            .hero-left, .hero-right {
+                padding: 25px;
+                border-radius: 25px;
             }
 
             .hero-left h1 {
-                font-size: 2em;
-            }
-
-            .hero-left .subtitle {
-                font-size: 1em;
-            }
-
-            .hero-right {
-                padding: 25px;
+                font-size: 1.8em;
             }
 
             .hero-right h2 {
-                font-size: 1.3em;
+                font-size: 1.4em;
             }
 
             .hero-right p {
-                font-size: 0.95em;
+                font-size: 1em;
             }
 
             .contact-section {
-                padding: 60px 20px;
+                padding: 50px 30px;
+                margin: 20px 20px 0 20px;
+                border-radius: 30px;
             }
 
             .contact-section h2 {
                 font-size: 2em;
-                letter-spacing: 2px;
+                flex-direction: column;
             }
 
             .contact-email {
                 font-size: 1.1em;
+            }
+
+            .contact-email a {
+                padding: 12px 30px;
+            }
+
+            footer {
+                margin: 20px 20px 0 20px;
+                border-radius: 20px 20px 0 0;
             }
         }
     </style>
@@ -222,24 +266,40 @@
 <body>
     <div class="container">
         <header>
-            <div class="company-name">Certana Intelligent Systems</div>
+            <div class="company-name">
+                <span class="pixel-icon">🏥</span>
+                Certana Intelligent Systems
+            </div>
         </header>
 
         <main>
             <section class="hero-section">
                 <div class="hero-left">
-                    <div class="subtitle">FormFlow</div>
-                    <h1>DISABILITY CLAIMS PROCESSING</h1>
+                    <div class="subtitle">
+                        <span>💙</span> FormFlow
+                    </div>
+                    <h1>Disability Claims Processing</h1>
+                    <div class="pixel-art">
+                        <span>🏥</span> <span>➡️</span> <span>📋</span> <span>➡️</span> <span>✅</span>
+                    </div>
                 </div>
 
                 <div class="hero-right">
-                    <h2>What We Do</h2>
+                    <h2>
+                        <span>✨</span> What We Do
+                    </h2>
                     <p>FormFlow is a HIPAA compliant web-based platform that serves as a fourth "node" between claimants, physicians, and insurers to eliminate the friction in disability claims. We fix the broken bridge between healthcare providers and insurance companies that rely on their medical documentation to adjudicate disability income claims.</p>
                 </div>
             </section>
 
+            <div class="decorative-pixels">
+                <span>🔷</span><span>💠</span><span>🔷</span><span>💠</span><span>🔷</span>
+            </div>
+
             <section class="contact-section">
-                <h2>CONTACT US</h2>
+                <h2>
+                    <span>📧</span> Contact Us <span>💌</span>
+                </h2>
                 <div class="contact-email">
                     <a href="mailto:hi@certanais.com">hi@certanais.com</a>
                 </div>
