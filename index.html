@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certana Intelligent Systems - FormFlow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 4px 20px rgba(100, 181, 246, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .company-name {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1976d2;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pixel-icon {
+            font-size: 1.2em;
+            display: inline-block;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 40px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-left {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
+        }
+
+        .hero-left .subtitle {
+            font-size: 1.2em;
+            color: #64b5f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-left h1 {
+            font-size: 3em;
+            font-weight: 800;
+            color: #1976d2;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .pixel-art {
+            font-size: 2em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .hero-right {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
+            border: 3px solid #e3f2fd;
+        }
+
+        .hero-right h2 {
+            font-size: 2em;
+            color: #1976d2;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-right p {
+            font-size: 1.1em;
+            color: #546e7a;
+            line-height: 1.8;
+        }
+
+        .decorative-pixels {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+        }
+
+        .contact-section {
+            background: white;
+            padding: 80px 60px;
+            margin: 40px 40px 0 40px;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
+        }
+
+        .contact-section h2 {
+            font-size: 4em;
+            font-weight: 800;
+            color: #1976d2;
+            margin-bottom: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-email {
+            font-size: 2em;
+            font-weight: 600;
+            color: #64b5f6;
+            margin-top: 20px;
+        }
+
+        .contact-email a {
+            color: #1976d2;
+            text-decoration: none;
+            padding: 15px 40px;
+            background: #e3f2fd;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(100, 181, 246, 0.2);
+        }
+
+        .contact-email a:hover {
+            background: #bbdefb;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 181, 246, 0.3);
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 40px 40px 0 40px;
+            border-radius: 30px 30px 0 0;
+            box-shadow: 0 -4px 20px rgba(100, 181, 246, 0.15);
+        }
+
+        footer p {
+            color: #90a4ae;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 968px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 20px;
+            }
+
+            .hero-left, .hero-right {
+                padding: 35px;
+            }
+
+            .hero-left h1 {
+                font-size: 2.2em;
+            }
+
+            .contact-section h2 {
+                font-size: 2.5em;
+            }
+
+            .contact-email {
+                font-size: 1.4em;
+            }
+
+            .company-name {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+                border-radius: 0 0 20px 20px;
+            }
+
+            .company-name {
+                font-size: 1.2em;
+            }
+
+            .hero-left, .hero-right {
+                padding: 25px;
+                border-radius: 25px;
+            }
+
+            .hero-left h1 {
+                font-size: 1.8em;
+            }
+
+            .hero-right h2 {
+                font-size: 1.4em;
+            }
+
+            .hero-right p {
+                font-size: 1em;
+            }
+
+            .contact-section {
+                padding: 50px 30px;
+                margin: 20px 20px 0 20px;
+                border-radius: 30px;
+            }
+
+            .contact-section h2 {
+                font-size: 2em;
+                flex-direction: column;
+            }
+
+            .contact-email {
+                font-size: 1.1em;
+            }
+
+            .contact-email a {
+                padding: 12px 30px;
+            }
+
+            footer {
+                margin: 20px 20px 0 20px;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="company-name">
+                <span class="pixel-icon">🏥</span>
+                Certana Intelligent Systems
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="hero-left">
+                    <div class="subtitle">
+                        <span>💙</span> FormFlow
+                    </div>
+                    <h1>Disability Claims Processing</h1>
+                    <div class="pixel-art">
+                        <span>🏥</span> <span>➡️</span> <span>📋</span> <span>➡️</span> <span>✅</span>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <h2>
+                        <span>✨</span> What We Do
+                    </h2>
+                    <p>FormFlow is a HIPAA compliant web-based platform that serves as a fourth "node" between claimants, physicians, and insurers to eliminate the friction in disability claims. We fix the broken bridge between healthcare providers and insurance companies that rely on their medical documentation to adjudicate disability income claims.</p>
+                </div>
+            </section>
+
+            <div class="decorative-pixels">
+                <span>🔷</span><span>💠</span><span>🔷</span><span>💠</span><span>🔷</span>
+            </div>
+
+            <section class="contact-section">
+                <h2>
+                    <span>📧</span> Contact Us <span>💌</span>
+                </h2>
+                <div class="contact-email">
+                    <a href="mailto:hi@certanais.com">hi@certanais.com</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Certana Intelligent Systems. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
