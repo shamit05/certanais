@@ -11,304 +11,719 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #1B3A52;
+            background: white;
             min-height: 100vh;
         }
 
-        .container {
+        /* Header Styles */
+        header {
+            background: white;
+            padding: 20px 60px;
+            box-shadow: 0 2px 10px rgba(27, 58, 82, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        header {
-            background: white;
-            padding: 30px 40px;
-            box-shadow: 0 4px 20px rgba(100, 181, 246, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-radius: 0 0 30px 30px;
+        .logo-container img {
+            height: 45px;
+            width: auto;
         }
 
-        .company-name {
-            font-size: 2em;
-            font-weight: 700;
-            color: #1976d2;
+        nav {
             display: flex;
+            gap: 35px;
             align-items: center;
-            gap: 15px;
         }
 
-        .pixel-icon {
+        nav a {
+            color: #1B3A52;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #F5A623;
+        }
+
+        .cta-nav {
+            background: #F5A623;
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-nav:hover {
+            background: #1B3A52;
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1B3A52 0%, #2a5270 100%);
+            padding: 120px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero-left .tagline {
+            font-size: 1.4em;
+            color: #F5A623;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-left p {
             font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: #F5A623;
+            color: #1B3A52;
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
             display: inline-block;
         }
 
-        main {
-            padding: 40px 20px;
+        .btn-primary:hover {
+            background: #f7b84d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 166, 35, 0.4);
         }
 
-        .hero-section {
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1B3A52;
+        }
+
+        .hero-right {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-right h3 {
+            color: #F5A623;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #F5A623;
+        }
+
+        .stat-label {
+            color: white;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 100px 60px;
+            background: #f8f9fa;
+        }
+
+        .problem-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .problem-content h2 {
+            font-size: 2.8em;
+            color: #1B3A52;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .problem-content .subtitle {
+            font-size: 1.3em;
+            color: #5a6c7d;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
-            padding: 60px 40px;
-            align-items: center;
+            margin-top: 60px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(27, 58, 82, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(27, 58, 82, 0.15);
+        }
+
+        .problem-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.5em;
+            color: #1B3A52;
+            margin-bottom: 15px;
+        }
+
+        .problem-card p {
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 100px 60px;
+            background: white;
+        }
+
+        .solution-content {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .hero-left {
-            background: white;
-            padding: 50px;
-            border-radius: 40px;
-            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
-        }
-
-        .hero-left .subtitle {
-            font-size: 1.2em;
-            color: #64b5f6;
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-left h1 {
-            font-size: 3em;
-            font-weight: 800;
-            color: #1976d2;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .pixel-art {
-            font-size: 2em;
-            margin: 20px 0;
+        .solution-header {
             text-align: center;
+            margin-bottom: 80px;
         }
 
-        .hero-right {
-            background: white;
-            padding: 50px;
-            border-radius: 40px;
-            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
-            border: 3px solid #e3f2fd;
-        }
-
-        .hero-right h2 {
-            font-size: 2em;
-            color: #1976d2;
+        .solution-header h2 {
+            font-size: 2.8em;
+            color: #1B3A52;
             margin-bottom: 20px;
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .hero-right p {
-            font-size: 1.1em;
-            color: #546e7a;
-            line-height: 1.8;
+        .solution-header p {
+            font-size: 1.3em;
+            color: #5a6c7d;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .decorative-pixels {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 30px 0;
-            font-size: 1.5em;
+        .solution-steps {
+            display: grid;
+            gap: 30px;
         }
 
-        .contact-section {
+        .step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+            align-items: start;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            border-left: 5px solid #F5A623;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
             background: white;
-            padding: 80px 60px;
-            margin: 40px 40px 0 40px;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(100, 181, 246, 0.2);
+            box-shadow: 0 8px 30px rgba(27, 58, 82, 0.1);
+            transform: translateX(10px);
         }
 
-        .contact-section h2 {
-            font-size: 4em;
-            font-weight: 800;
-            color: #1976d2;
-            margin-bottom: 30px;
-            display: inline-flex;
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #F5A623 0%, #f7b84d 100%);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            gap: 20px;
-        }
-
-        .contact-email {
+            justify-content: center;
             font-size: 2em;
-            font-weight: 600;
-            color: #64b5f6;
-            margin-top: 20px;
+            font-weight: 700;
+            color: white;
         }
 
-        .contact-email a {
-            color: #1976d2;
+        .step-content h3 {
+            font-size: 1.6em;
+            color: #1B3A52;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: #5a6c7d;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, #1B3A52 0%, #2a5270 100%);
+            color: white;
+        }
+
+        .benefits-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .benefits-header h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .benefits-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #F5A623;
+        }
+
+        .benefit-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 60px;
+            background: #F5A623;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3em;
+            color: #1B3A52;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            color: #1B3A52;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: #1B3A52;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 30px;
             text-decoration: none;
-            padding: 15px 40px;
-            background: #e3f2fd;
-            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2em;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(100, 181, 246, 0.2);
         }
 
-        .contact-email a:hover {
-            background: #bbdefb;
+        .cta-button:hover {
+            background: #2a5270;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(100, 181, 246, 0.3);
+            box-shadow: 0 8px 25px rgba(27, 58, 82, 0.4);
         }
 
+        /* Footer */
         footer {
-            background: white;
+            background: #1B3A52;
+            color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin: 40px 40px 0 40px;
-            border-radius: 30px 30px 0 0;
-            box-shadow: 0 -4px 20px rgba(100, 181, 246, 0.15);
+            padding: 50px 60px;
         }
 
         footer p {
-            color: #90a4ae;
-            font-size: 0.95em;
+            opacity: 0.8;
+            font-size: 1em;
         }
 
-        @media (max-width: 968px) {
-            .hero-section {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 40px 20px;
+                gap: 40px;
             }
 
-            .hero-left, .hero-right {
-                padding: 35px;
+            .problem-grid, .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                grid-template-columns: 60px 1fr;
+                padding: 30px;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.6em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo-container img {
+                height: 35px;
+            }
+
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 80px 30px;
             }
 
             .hero-left h1 {
                 font-size: 2.2em;
             }
 
-            .contact-section h2 {
-                font-size: 2.5em;
-            }
-
-            .contact-email {
-                font-size: 1.4em;
-            }
-
-            .company-name {
-                font-size: 1.5em;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 20px;
-                border-radius: 0 0 20px 20px;
-            }
-
-            .company-name {
-                font-size: 1.2em;
-            }
-
-            .hero-left, .hero-right {
-                padding: 25px;
-                border-radius: 25px;
-            }
-
-            .hero-left h1 {
-                font-size: 1.8em;
-            }
-
-            .hero-right h2 {
-                font-size: 1.4em;
-            }
-
-            .hero-right p {
-                font-size: 1em;
-            }
-
-            .contact-section {
-                padding: 50px 30px;
-                margin: 20px 20px 0 20px;
-                border-radius: 30px;
-            }
-
-            .contact-section h2 {
-                font-size: 2em;
-                flex-direction: column;
-            }
-
-            .contact-email {
+            .hero-left .tagline {
                 font-size: 1.1em;
             }
 
-            .contact-email a {
-                padding: 12px 30px;
+            .hero-left p {
+                font-size: 1.05em;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-section, .solution-section, .benefits-section, .cta-section {
+                padding: 60px 30px;
+            }
+
+            .problem-content h2, .solution-header h2, .benefits-header h2, .cta-section h2 {
+                font-size: 2em;
+            }
+
+            .problem-content .subtitle, .solution-header p {
+                font-size: 1.1em;
+            }
+
+            .step {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4em;
+            }
+
+            .step-content h3 {
+                font-size: 1.3em;
+            }
+
+            .btn-primary, .btn-secondary, .cta-button {
+                padding: 14px 30px;
+                font-size: 1em;
             }
 
             footer {
-                margin: 20px 20px 0 20px;
-                border-radius: 20px 20px 0 0;
+                padding: 40px 30px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="company-name">
-                <span class="pixel-icon">🏥</span>
-                Certana Intelligent Systems
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="CIS Logo blank.png" alt="Certana Intelligent Systems">
             </div>
-        </header>
+            <nav>
+                <a href="#problem">The Problem</a>
+                <a href="#solution">How It Works</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#contact" class="cta-nav">Get Started</a>
+            </nav>
+        </div>
+    </header>
 
-        <main>
-            <section class="hero-section">
-                <div class="hero-left">
-                    <div class="subtitle">
-                        <span>💙</span> FormFlow
-                    </div>
-                    <h1>Disability Claims Processing</h1>
-                    <div class="pixel-art">
-                        <span>🏥</span> <span>➡️</span> <span>📋</span> <span>➡️</span> <span>✅</span>
-                    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="tagline">From data to decision – automatically</div>
+                <h1>Transforming Disability Claims Processing</h1>
+                <p>FormFlow is a HIPAA-compliant AI platform that eliminates friction in disability claims by connecting claimants, physicians, and insurers through intelligent automation.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Request a Demo</a>
+                    <a href="#solution" class="btn-secondary">Learn More</a>
                 </div>
-
-                <div class="hero-right">
-                    <h2>
-                        <span>✨</span> What We Do
-                    </h2>
-                    <p>FormFlow is a HIPAA compliant web-based platform that serves as a fourth "node" between claimants, physicians, and insurers to eliminate the friction in disability claims. We fix the broken bridge between healthcare providers and insurance companies that rely on their medical documentation to adjudicate disability income claims.</p>
-                </div>
-            </section>
-
-            <div class="decorative-pixels">
-                <span>🔷</span><span>💠</span><span>🔷</span><span>💠</span><span>🔷</span>
             </div>
-
-            <section class="contact-section">
-                <h2>
-                    <span>📧</span> Contact Us <span>💌</span>
-                </h2>
-                <div class="contact-email">
-                    <a href="mailto:hi@certanais.com">hi@certanais.com</a>
+            <div class="hero-right">
+                <h3>The Impact</h3>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Time Saved</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">HIPAA Compliant</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Stakeholders Connected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Real-Time Tracking</div>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2025 Certana Intelligent Systems. All rights reserved.</p>
-        </footer>
-    </div>
+    <section class="problem-section" id="problem">
+        <div class="problem-content">
+            <h2>The Broken Bridge in Healthcare</h2>
+            <p class="subtitle">Today's disability claims process is rudderless: claimants facing serious medical conditions navigate complex forms through physicians who rarely have a complete view. The result? Fragmented documentation, frustrated stakeholders, and costly delays.</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>For Claimants</h3>
+                    <p>Overwhelming paperwork during already stressful times, with no visibility into claim status or next steps.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>For Physicians</h3>
+                    <p>Hours spent manually reconciling records and filling forms, taking time away from patient care.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>For Insurers</h3>
+                    <p>Incomplete or inconsistent documentation leading to delays, disputes, and increased adjudication costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section" id="solution">
+        <div class="solution-content">
+            <div class="solution-header">
+                <h2>How FormFlow Works</h2>
+                <p>Our AI-powered platform acts as the fourth node, seamlessly connecting all stakeholders and automating the entire claims workflow.</p>
+            </div>
+            
+            <div class="solution-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Ingest Medical Records</h3>
+                        <p>Connect to any source or format—fax, EMR, dictation, or paper records. Our system handles structured and unstructured data seamlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI-Powered Extraction</h3>
+                        <p>Our proprietary LLM engine rapidly parses and extracts relevant clinical data using medical frameworks and context-aware logic.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Auto-Fill Forms</h3>
+                        <p>Complex claims forms are automatically populated with clear citations to source records, enabling physicians to review and attest rather than manually search.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Real-Time Transparency</h3>
+                        <p>Intuitive dashboards and notifications keep all stakeholders informed, creating accountability and eliminating uncertainty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section" id="benefits">
+        <div class="benefits-content">
+            <div class="benefits-header">
+                <h2>Why Choose FormFlow</h2>
+                <p>Precision AI for healthcare and insurance infrastructure</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Speed & Efficiency</h3>
+                    <p>Reduce claims processing time by up to 80%, allowing physicians to focus on patient care and insurers to make faster decisions.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Accuracy & Compliance</h3>
+                    <p>HIPAA-compliant platform with complete audit trails, ensuring accuracy and regulatory compliance at every step.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Seamless Integration</h3>
+                    <p>Works with any EMR system or document format. No disruption to existing workflows or infrastructure.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Better Experience</h3>
+                    <p>Improved satisfaction for claimants, physicians, and insurers through transparency and reduced administrative burden.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Cost Reduction</h3>
+                    <p>Lower operational costs through automation while maintaining the highest standards of accuracy and compliance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Scalable Platform</h3>
+                    <p>Modular architecture built to expand into underwriting, appeals, and other insurance lifecycle phases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2>Ready to Transform Your Claims Process?</h2>
+        <p>Join the healthcare and insurance providers already benefiting from FormFlow's intelligent automation.</p>
+        <a href="mailto:hi@certanais.com" class="cta-button">Contact Us Today</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Certana Intelligent Systems. All rights reserved.</p>
+    </footer>
 </body>
 </html>
